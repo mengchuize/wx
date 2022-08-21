@@ -56,6 +56,6 @@ data = {"time":{"value":today_str,"color":"#C0C0C0"},
         "days":{"value":days_str},
         "others1":{"value":others1_str},
         "others2":{"value":others2_str},
-        "copyright":{"value":copyright_str},"color":"#F08080"}}
+        "copyright":{"value":copyright_str,"color":"#F08080"}}
 
 res = wm.send_template(user_id, template_id, data)
