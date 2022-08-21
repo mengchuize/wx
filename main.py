@@ -25,7 +25,7 @@ def get_weather():
 
 def get_days():
   next = birthday
-  next = datetime.strptime(birthday, "%Y-%m-%d"))
+  next = datetime.strptime(birthday, "%Y-%m-%d")
 
   return (next - today).days
 
