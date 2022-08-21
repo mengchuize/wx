@@ -46,6 +46,18 @@ copyright_str = "[这里的信息仅你可见]"
 others1_str = ""
 others2_str = ""
 
+if "雨" in weather_str：
+  others1_str = others1_str + "冰冰！今天有雨噢，出门记着打伞！"
+else:
+  others1_str = others1_str + "今天天气不错噢！冰冰有打算出门嘛！"
+  
+if temputer_str > 30：
+  others1_str = others1_str + "今天温度很高哦，出门记着防晒！"
+else:
+  others1_str = others1_str + "今天温度还可以，可以出门逛逛！"
+
+others1_str = others1_str + '/n' + "我们已经认识" + str(days_str) + "天了，我们还会相伴更久！"
+  
 client = WeChatClient(app_id, app_secret)
 
 wm = WeChatMessage(client)
