@@ -17,7 +17,6 @@ app_secret = os.environ["APP_SECRET"]
 user_id = os.environ["USER_ID"]
 template_id = os.environ["TEMPLATE_ID"]
 
-
 def get_weather():
   url = "http://autodev.openspeech.cn/csp/api/v2.1/weather?openId=aiuicus&clientType=android&sign=android&city=" + city
   res = requests.get(url).json()
@@ -25,9 +24,7 @@ def get_weather():
   return weather['weather'], math.floor(weather['temp'])
 
 def get_days():
-  next = datetime.strptime(str(date.today().year) + "-" + birthday, "%Y-%m-%d")
-  if next < datetime.now():
-    next = next.replace(year=next.year + 1)
+  next = birthday
   return (next - today).days
 
 def get_words():
@@ -44,7 +41,7 @@ weather_str, temputer_str = get_weather()
 days_str = get_days()
 copyright_str = "[这里的信息仅你可见]"
 others1_str = ""
-others2_str = ""
+others2_str = get_words()
 
 if "雨" in weather_str:
   others1_str = others1_str + "冰冰！今天有雨噢，出门记着打伞！"
@@ -56,7 +53,7 @@ if temputer_str > 30:
 else:
   others1_str = others1_str + "今天温度还可以，可以出门逛逛！"
 
-others1_str = others1_str + '/n' + "我们已经认识" + str(days_str) + "天了，我们还会相伴更久！"
+others1_str = others1_str + "我们已经认识" + str(days_str) + "天了，昨晚有没有想我？我相信我们还会相伴更久！"
   
 client = WeChatClient(app_id, app_secret)
 
