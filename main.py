@@ -49,6 +49,6 @@ client = WeChatClient(app_id, app_secret)
 wm = WeChatMessage(client)
 # wea, temperature = get_weather()
 # data = {"weather":{"value":wea},"temperature":{"value":temperature},"love_days":{"value":get_count()},"birthday_left":{"value":get_birthday()},"words":{"value":get_words(), "color":get_random_color()}}
-data = {"message":{"value":"这是我在这里发给你的第一个信息，很开心可以与你相识，以后就在这里和你说早安啦！"},"time":{"value":today_str,"color":"#C0C0C0"}}
+data = {"message0":{"value":"“跟你在一起的时光，全都很耀眼。因为天气好，因为天气不好，因为天气刚刚好。每一天，都很美好。”"},"message1":{"value":"    这是我在这里发给你的第一个信息，很开心可以与你相识，更希望我们可以相伴很久。以后就在这里和你说早安啦！"},"time":{"value":today_str,"color":"#C0C0C0"}}
 res = wm.send_template(user_id, template_id, data)
 print(res)
