@@ -27,7 +27,7 @@ def get_days():
   next = birthday
   next = datetime.strptime(birthday, "%Y-%m-%d")
 
-  return (next - today).days
+  return (today - next).days
 
 def get_words():
   words = requests.get("https://api.shadiao.pro/chp")
