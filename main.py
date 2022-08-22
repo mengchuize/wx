@@ -40,7 +40,7 @@ def get_random_color():
 
 today_str =  str(today.year) + "年" + str(today.month) + "月" + str(today.day) + "日"
 weather_str, temputer_str = get_weather()
-days_str = get_days()
+days_str = get_days() + 1
 copyright_str = "[这里的信息仅你可见]"
 others1_str = ""
 others2_str = get_words()
@@ -66,7 +66,7 @@ data = {"time":{"value":today_str,"color":"#C0C0C0"},
         "temputer":{"value":temputer_str},
         "days":{"value":days_str},
         "others1":{"value":others1_str},
-        "others2":{"value":others2_str},
+        "others2":{"value":others2_str,"color":get_random_color()},
         "copyright":{"value":copyright_str,"color":"#F08080"}}
 
 res = wm.send_template(user_id, template_id, data)
