@@ -17,12 +17,12 @@ app_secret = os.environ["APP_SECRET"]
 user_id = os.environ["USER_ID"]
 template_id = os.environ["TEMPLATE_ID"]
 
-event_list = [["和闺蜜出门","2022年8月22日"]]
+event_list = [["和闺蜜出门","2022年8月24日"]]
 
-weather_list = [["冰冰！今天有雨噢，出门记着打伞！"],
-                ["今天天气不错噢！冰冰有打算出门嘛！"]]
+weather_list = [["冰冰！今天有雨噢，出门记着打伞！","要下雨啦！冰冰还是待在家和锤锤聊天吧！","下雨了天气凉，冰冰出门穿好衣服！"],
+                ["今天天气不错噢！冰冰有打算出门嘛！","今天是个好天气呐，心情有没有更愉悦呢？","这么好的天气，不给锤锤看看天空的云嘛？"]]
 
-temputer_list = [["今天温度很高哦，出门记着防晒！"],
+temputer_list = [["今天温度很高哦，出门记着防晒！","今天超热的，冰冰乖乖待在家里吧！","这么热，冰冰又该出很多汗了吧！"],
                  ["今天温度还可以，可以出门逛逛！"],
                  ["今天会很冷哦，出门要多穿衣服！"]]
 
@@ -90,7 +90,7 @@ copyright_str = "[这里的信息仅你可见]"
 data = {"time":{"value":today_str,"color":"#C0C0C0"},
         "weather":{"value":weather_str},
         "temputer":{"value":temputer_str},
-        "days":{"value":days_str},
+        "days":{"value":days_str + "天"},
         "tips_str":{"value":tips[0],"color":"#F08080"},
         "e_tips":{"value":tips[1]},
         "w_tips":{"value":tips[2]},
