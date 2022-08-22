@@ -55,14 +55,14 @@ def get_random_color():
 def combineTips(today_str,weather,temputer,days_str):
     
     tips_str = "锤锤的Tips\n"
-    e_tips = "今天没有要紧的事情哦！好好休息一下吧！"
+    e_tips = "·今天没有要紧的事情哦！好好休息一下吧！"
     w_tips = "0"
     t_tips = "0"
     d_tips = "0"
     
     for event in event_list:
         if str(event[1]) == str(today_str):
-            e_tips = "别忘了今天要[" + event[0] + "]哦！"
+            e_tips = "·别忘了今天要[" + event[0] + "]哦！"
     
     if "雨" in weather_str:
         w_tips = "·" + weather_list[0][random.randint(0,len(weather_list[0])-1)]
