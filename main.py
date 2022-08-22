@@ -90,7 +90,7 @@ copyright_str = "[这里的信息仅你可见]"
 data = {"time":{"value":today_str,"color":"#C0C0C0"},
         "weather":{"value":weather_str},
         "temputer":{"value":temputer_str},
-        "days":{"value":days_str + "天"},
+        "days":{"value":str(days_str) + "天"},
         "tips_str":{"value":tips[0],"color":"#F08080"},
         "e_tips":{"value":tips[1]},
         "w_tips":{"value":tips[2]},
