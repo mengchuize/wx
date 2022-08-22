@@ -17,7 +17,7 @@ app_secret = os.environ["APP_SECRET"]
 user_id = os.environ["USER_ID"]
 template_id = os.environ["TEMPLATE_ID"]
 
-event_list = [["和闺蜜出门","2022年8月24日"]]
+event_list = [["和闺蜜出门","2022年8月22日"]]
 
 weather_list = [["冰冰！今天有雨噢，出门记着打伞！"],
                 ["今天天气不错噢！冰冰有打算出门嘛！"]]
