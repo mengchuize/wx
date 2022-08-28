@@ -31,7 +31,8 @@ days_list = ["昨晚有没有想我？",
              "有空记得给我打电话哦！",
              "我想听你唱歌呐！",
              "想听你撒娇呐！",
-             "今天还是非常想你！"]
+             "今天还是非常想你！",
+             "今天更喜欢你了！"]
 
 def get_weather():
     url = "http://autodev.openspeech.cn/csp/api/v2.1/weather?openId=aiuicus&clientType=android&sign=android&city=" + city
