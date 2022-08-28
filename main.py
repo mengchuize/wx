@@ -29,7 +29,9 @@ temputer_list = [["今天温度很高哦，出门记着防晒！","今天超热�
 days_list = ["昨晚有没有想我？",
              "想我记得找我聊天哦！",
              "有空记得给我打电话哦！",
-             "我想听你唱歌呐！"]
+             "我想听你唱歌呐！",
+             "想听你撒娇呐！",
+             "今天还是非常想你！"]
 
 def get_weather():
     url = "http://autodev.openspeech.cn/csp/api/v2.1/weather?openId=aiuicus&clientType=android&sign=android&city=" + city
@@ -63,6 +65,8 @@ def combineTips(today_str,weather,temputer,days_str):
     for event in event_list:
         if str(event[1]) == str(today_str):
             e_tips = "·别忘了今天要[" + event[0] + "]哦！"
+    if today.day == 1:
+        e_tips = "·今天是" + today.month + "月的第一天，新的一月要开心呀！"
     
     if "雨" in weather_str:
         w_tips = "·" + weather_list[0][random.randint(0,len(weather_list[0])-1)]
