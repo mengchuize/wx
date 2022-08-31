@@ -101,7 +101,7 @@ data = {"time":{"value":today_str,"color":"#C0C0C0"},
         "e_tips":{"value":tips[1]},
         "w_tips":{"value":tips[2]},
         "t_tips":{"value":tips[3]},
-        "d_tips":{"value":tips[4],"color":"#FFB5C5"},
+        "d_tips":{"value":tips[4],"color":"#FF1493"},
         "words":{"value":words,"color":get_random_color()},
         "copyright":{"value":copyright_str,"color":"#F08080"}}
   
