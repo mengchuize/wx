@@ -57,7 +57,7 @@ def get_random_color():
 def combineTips(today_str,weather,temputer,days_str):
     
     tips_str = "锤锤的Tips\n"
-    e_tips = "·今天没有要紧的事情哦！好好休息一下吧！"
+    e_tips = "·今天没有要紧的事情哦！那就多陪陪锤锤吧！"
     w_tips = "0"
     t_tips = "0"
     d_tips = "0"
@@ -101,7 +101,7 @@ data = {"time":{"value":today_str,"color":"#C0C0C0"},
         "e_tips":{"value":tips[1]},
         "w_tips":{"value":tips[2]},
         "t_tips":{"value":tips[3]},
-        "d_tips":{"value":tips[4],"color":"#FFC0CB"},
+        "d_tips":{"value":tips[4],"color":"#FF6EB4"},
         "words":{"value":words,"color":get_random_color()},
         "copyright":{"value":copyright_str,"color":"#F08080"}}
   
