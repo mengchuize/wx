@@ -6,11 +6,6 @@ import requests
 import os
 import random
 
-import base64
-f=open('01.png','r') #二进制方式打开图文件
-ls_f=base64.b64encode(f.read()) #读取文件内容，转换为base64编码
-
-
 today = datetime.now()
 start_date = os.environ['START_DATE']
 city = os.environ['CITY']
@@ -96,8 +91,14 @@ tips = combineTips(today_str,weather_str,temputer_str,days_str)
 words = get_words()
 copyright_str = "[这里的信息仅你可见]"
 
+tips[0] = ""
+tips[1] = "八月，很    哈哈哈"
+tips[2] = ""
+tips[3] = ""
+tips[4] = ""
+
 data = {"time":{"value":today_str,"color":"#C0C0C0"},
-        "weather":{"value":ls_f},
+        "weather":{"value":weather_str},
         "temputer":{"value":temputer_str},
         "days":{"value":str(days_str) + "天"},
         "tips_str":{"value":tips[0],"color":"#F08080"},
