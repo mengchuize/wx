@@ -91,11 +91,7 @@ tips = combineTips(today_str,weather_str,temputer_str,days_str)
 words = get_words()
 copyright_str = "[这里的信息仅你可见]"
 
-tips[0] = ""
-tips[1] = "八月，很    哈哈哈"
-tips[2] = ""
-tips[3] = ""
-tips[4] = ""
+tips[4] = "“八月”拍了拍你 说“再见啦”。八月有你真的很好，希望九月我们能一起变得更好！ଘ( ˊᵕˋ )ଓ九月快乐~"
 
 data = {"time":{"value":today_str,"color":"#C0C0C0"},
         "weather":{"value":weather_str},
@@ -103,8 +99,8 @@ data = {"time":{"value":today_str,"color":"#C0C0C0"},
         "days":{"value":str(days_str) + "天"},
         "tips_str":{"value":tips[0],"color":"#F08080"},
         "e_tips":{"value":tips[1]},
-#         "w_tips":{"value":tips[2]},
-#         "t_tips":{"value":tips[3]},
+        "w_tips":{"value":tips[2]},
+        "t_tips":{"value":tips[3]},
         "d_tips":{"value":tips[4]},
         "words":{"value":words,"color":get_random_color()},
         "copyright":{"value":copyright_str,"color":"#F08080"}}
