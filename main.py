@@ -28,10 +28,7 @@ temputer_list = [["今天温度很高哦，出门记着防晒！","今天超热�
 
 days_list = ["昨晚有没有想我？",
              "想我记得找我聊天哦！",
-             "有空记得给我打电话哦！",
-             "想听你撒娇呐！",
-             "今天还是非常想你！",
-             "今天更喜欢你了！"]
+             "有空记得给我打电话哦！"]
 
 def get_weather():
     url = "http://autodev.openspeech.cn/csp/api/v2.1/weather?openId=aiuicus&clientType=android&sign=android&city=" + city
@@ -65,8 +62,6 @@ def combineTips(today_str,weather,temputer,days_str):
     for event in event_list:
         if str(event[1]) == str(today_str):
             e_tips = "·别忘了今天要[" + event[0] + "]哦！"
-#     if today.day == 1:
-#         e_tips = e_tips + "今天是" + today.month + "月的第一天，新的一月要开心呀！"
     
     if "雨" in weather_str:
         w_tips = "·" + weather_list[0][random.randint(0,len(weather_list[0])-1)]
@@ -91,7 +86,6 @@ tips = combineTips(today_str,weather_str,temputer_str,days_str)
 words = get_words()
 copyright_str = "[这里的信息仅你可见]"
 
-tips[4] = "“八月”拍了拍你 说“再见啦”。八月有你真的很好，希望九月我们能一起变得更好，我们之间能变得更好！ଘ( ˊᵕˋ )ଓ九月快乐~"
 
 data = {"time":{"value":today_str,"color":"#C0C0C0"},
         "weather":{"value":weather_str},
@@ -101,7 +95,7 @@ data = {"time":{"value":today_str,"color":"#C0C0C0"},
         "e_tips":{"value":tips[1]},
         "w_tips":{"value":tips[2]},
         "t_tips":{"value":tips[3]},
-        "d_tips":{"value":tips[4],"color":"#FF1493"},
+        "d_tips":{"value":tips[4]},
         "words":{"value":words,"color":get_random_color()},
         "copyright":{"value":copyright_str,"color":"#F08080"}}
   
