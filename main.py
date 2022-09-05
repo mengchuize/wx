@@ -26,7 +26,7 @@ temputer_list = [["今天温度很高哦，出门记着防晒！","今天超热�
                  ["今天温度还可以，可以出门逛逛！"],
                  ["今天会很冷哦，出门要多穿衣服！"]]
 
-days_list = ["“陪你把沿路感想活出了答案，陪你把独自孤单变成了勇敢”"]
+days_list = ["“陪你把沿路感想活出了答案，陪你把独自孤单变成了勇敢...”"]
 
 def get_weather():
     url = "http://autodev.openspeech.cn/csp/api/v2.1/weather?openId=aiuicus&clientType=android&sign=android&city=" + city
@@ -87,7 +87,7 @@ copyright_str = "[这里的信息仅你可见]"
 
 data = {"time":{"value":today_str,"color":"#C0C0C0"},
         "weather":{"value":weather_str},
-        "temputer":{"value":str(temputer_min_str) + " - " + str(temputer_max_str)},
+        "temputer":{"value":str(temputer_min_str) + "℃ - " + str(temputer_max_str) + "℃"},
         "days":{"value":str(days_str) + "天"},
         "tips_str":{"value":tips[0],"color":"#F08080"},
         "e_tips":{"value":tips[1]},
