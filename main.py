@@ -26,7 +26,7 @@ temputer_list = [["今天温度很高哦，出门记着防晒！","今天超热�
                  ["今天温度还可以，可以出门逛逛！"],
                  ["今天会很冷哦，出门要多穿衣服！"]]
 
-days_list = ["陪你把沿路感想活出了答案，陪你把独自孤单变成了勇敢。"]
+days_list = ["“陪你把沿路感想活出了答案，陪你把独自孤单变成了勇敢”"]
 
 def get_weather():
     url = "http://autodev.openspeech.cn/csp/api/v2.1/weather?openId=aiuicus&clientType=android&sign=android&city=" + city
@@ -73,14 +73,14 @@ def combineTips(today_str,weather,temputer,days_str):
     else:
         t_tips = "·" + temputer_list[1][random.randint(0,len(temputer_list[1])-1)] 
 
-    d_tips = "·" + "我们已经认识" + str(days_str) + "天了，" + days_list[random.randint(0,len(days_list)-1)] 
+    d_tips = "·" + "我们已经认识" + str(days_str) + "天了。" + days_list[random.randint(0,len(days_list)-1)] 
     
     return [tips_str, e_tips, w_tips, t_tips, d_tips]
 
 today_str =  str(today.year) + "年" + str(today.month) + "月" + str(today.day) + "日"
 weather_str, temputer_min_str, temputer_max_str = get_weather()
 days_str = get_knowdays()
-tips = combineTips(today_str,weather_str,temputer_min_str,days_str)
+tips = combineTips(today_str,weather_str,temputer_max_str,days_str)
 words = get_words()
 copyright_str = "[这里的信息仅你可见]"
 
