@@ -66,9 +66,9 @@ def combineTips(today_str,weather,temputer,days_str):
     else:
         w_tips = "·" + weather_list[1][random.randint(0,len(weather_list[1])-1)]
 
-    if temputer_str > 30:
+    if temputer > 30:
         t_tips = "·" + temputer_list[0][random.randint(0,len(temputer_list[0])-1)]
-    elif temputer_str < 22:
+    elif temputer < 22:
         t_tips = "·" + temputer_list[2][random.randint(0,len(temputer_list[2])-1)]
     else:
         t_tips = "·" + temputer_list[1][random.randint(0,len(temputer_list[1])-1)] 
