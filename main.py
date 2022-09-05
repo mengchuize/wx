@@ -32,7 +32,7 @@ def get_weather():
     url = "http://autodev.openspeech.cn/csp/api/v2.1/weather?openId=aiuicus&clientType=android&sign=android&city=" + city
     res = requests.get(url).json()
     weather = res['data']['list'][0]
-    return weather['weather'], math.floor(weather['temp'])
+    return weather['weather'], math.floor(weather['low']), math.floor(weather['high'])
 
 def get_knowdays():
 
@@ -78,16 +78,16 @@ def combineTips(today_str,weather,temputer,days_str):
     return [tips_str, e_tips, w_tips, t_tips, d_tips]
 
 today_str =  str(today.year) + "年" + str(today.month) + "月" + str(today.day) + "日"
-weather_str, temputer_str = get_weather()
+weather_str, temputer_min_str, temputer_max_str = get_weather()
 days_str = get_knowdays()
-tips = combineTips(today_str,weather_str,temputer_str,days_str)
+tips = combineTips(today_str,weather_str,temputer_min_str,days_str)
 words = get_words()
 copyright_str = "[这里的信息仅你可见]"
 
 
 data = {"time":{"value":today_str,"color":"#C0C0C0"},
         "weather":{"value":weather_str},
-        "temputer":{"value":temputer_str},
+        "temputer":{"value":temputer_min_str + " - " + temputer_max_str},
         "days":{"value":str(days_str) + "天"},
         "tips_str":{"value":tips[0],"color":"#F08080"},
         "e_tips":{"value":tips[1]},
