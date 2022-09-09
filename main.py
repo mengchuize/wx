@@ -86,7 +86,7 @@ days_str = get_knowdays()
 tips = combineTips(today_str,weather_str,temputer_max_str,days_str)
 words = "“"  + get_words() + "”"
 # copyright_str = "[这里的信息仅你可见]"
-copyright_str = "[🧡冰冰专属信息🧡]"
+copyright_str = "[冰冰专属信息🧡]"
 
 data = {"time":{"value":today_str,"color":"#C0C0C0"},
         "weather":{"value":weather_str},
