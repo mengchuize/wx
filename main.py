@@ -30,7 +30,7 @@ temputer_list = [["今天温度很高哦，出门记着防晒！","今天超热�
 #             "“等到风景都看透，也许你会陪我看细水长流。”"]
 
 # days_list = ["“在所有人事已非的景色里，我最喜欢你。”"]
-days_list = ["冰冰中秋节快乐~💗遇见你，从此凛冬散尽，星河长明。"]
+days_list = ["冰冰中秋节快乐~💗💗💗遇见你，从此凛冬散尽，星河长明。"]
 def get_weather():
     url = "http://autodev.openspeech.cn/csp/api/v2.1/weather?openId=aiuicus&clientType=android&sign=android&city=" + city
     res = requests.get(url).json()
@@ -84,7 +84,7 @@ today_str =  str(today.year) + "年" + str(today.month) + "月" + str(today.day)
 weather_str, temputer_min_str, temputer_max_str = get_weather()
 days_str = get_knowdays()
 tips = combineTips(today_str,weather_str,temputer_max_str,days_str)
-words = get_words()
+words = "“"  + get_words() + "”"
 # copyright_str = "[这里的信息仅你可见]"
 copyright_str = "[🧡冰冰专属信息🧡]"
 
