@@ -54,29 +54,29 @@ def get_random_color():
 
 def combineTips(today_str,weather,temputer,days_str):
     
-    tips_str = "锤锤的Tips\n"
-    e_tips = "·今天没有要紧的事情哦！那就多陪陪锤锤吧！"
+    tips_str = "锤锤的Tips🥰\n"
+    e_tips = "·📆今天没有要紧的事情哦！那就多陪陪锤锤吧！"
     w_tips = "0"
     t_tips = "0"
     d_tips = "0"
     
     for event in event_list:
         if str(event[1]) == str(today_str):
-            e_tips = "·别忘了今天要[" + event[0] + "]哦！"
+            e_tips = "·📆别忘了今天要[" + event[0] + "]哦！"
     
     if "雨" in weather_str:
-        w_tips = "·" + weather_list[0][random.randint(0,len(weather_list[0])-1)]
+        w_tips = "·💧" + weather_list[0][random.randint(0,len(weather_list[0])-1)]
     else:
-        w_tips = "·" + weather_list[1][random.randint(0,len(weather_list[1])-1)]
+        w_tips = "·🌞" + weather_list[1][random.randint(0,len(weather_list[1])-1)]
 
     if temputer > 30:
-        t_tips = "·" + temputer_list[0][random.randint(0,len(temputer_list[0])-1)]
+        t_tips = "·🔥" + temputer_list[0][random.randint(0,len(temputer_list[0])-1)]
     elif temputer < 22:
-        t_tips = "·" + temputer_list[2][random.randint(0,len(temputer_list[2])-1)]
+        t_tips = "·🥶" + temputer_list[2][random.randint(0,len(temputer_list[2])-1)]
     else:
-        t_tips = "·" + temputer_list[1][random.randint(0,len(temputer_list[1])-1)] 
+        t_tips = "·🌈" + temputer_list[1][random.randint(0,len(temputer_list[1])-1)] 
 
-    d_tips = "·" + "我们已经认识" + str(days_str) + "天了。" + days_list[random.randint(0,len(days_list)-1)] 
+    d_tips = "·" + "👨🏻‍🤝‍👨🏻我们已经认识" + str(days_str) + "天了。" + days_list[random.randint(0,len(days_list)-1)] 
     
     return [tips_str, e_tips, w_tips, t_tips, d_tips]
 
@@ -86,7 +86,7 @@ days_str = get_knowdays()
 tips = combineTips(today_str,weather_str,temputer_max_str,days_str)
 words = get_words()
 # copyright_str = "[这里的信息仅你可见]"
-copyright_str = "[冰冰专属信息]"
+copyright_str = "[冰冰专属信息🧡]"
 
 data = {"time":{"value":today_str,"color":"#C0C0C0"},
         "weather":{"value":weather_str},
