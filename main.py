@@ -76,7 +76,7 @@ def combineTips(today_str,weather,temputer,days_str):
     else:
         t_tips = "·🌈" + temputer_list[1][random.randint(0,len(temputer_list[1])-1)] 
 
-    d_tips = "·" + "👨🏻‍🤝‍👨🏻我们已经认识" + str(days_str) + "天了。" + days_list[random.randint(0,len(days_list)-1)] 
+    d_tips = "·💕我们已经认识" + str(days_str) + "天了。" + days_list[random.randint(0,len(days_list)-1)] 
     
     return [tips_str, e_tips, w_tips, t_tips, d_tips]
 
