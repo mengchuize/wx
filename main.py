@@ -97,8 +97,8 @@ data = {"time":{"value":today_str,"color":"#C0C0C0"},
         "w_tips":{"value":tips[2]},
         "t_tips":{"value":tips[3]},
         "d_tips":{"value":tips[4]},
-        "words":{"value":words,"color":get_random_color()},
-        "copyright":{"value":copyright_str,"color":"#F08080"}}
+        "words":{"value":words},
+        "copyright":{"value":copyright_str}}
   
 client = WeChatClient(app_id, app_secret)
 
